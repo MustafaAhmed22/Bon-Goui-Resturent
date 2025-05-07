@@ -637,3 +637,42 @@ $(function() {
 	
 });
 
+const mapAreas = document.querySelectorAll("area");
+const popup = document.getElementById("popup");
+const tableNumberSpan = document.getElementById("tableNumber");
+const overlay = document.getElementById("overlay");
+
+mapAreas.forEach((area) => {
+  area.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    // Highlight table
+    const coords = area.coords.split(",").map(Number);
+    overlay.style.cssText = `
+                    position: absolute;
+                    left: ${coords[0]}px;
+                    top: ${coords[1]}px;
+                    width: ${coords[2] - coords[0]}px;
+                    height: ${coords[3] - coords[1]}px;
+                    border: 4px groove #212121;
+
+                `;
+
+    // Show popup
+    const tableNumber = area.dataset.table;
+    tableNumberSpan.textContent = tableNumber;
+
+    const rect = area.getBoundingClientRect();
+    popup.style.display = "block";
+    popup.style.left = `${rect.left + window.pageXOffset}px`;
+    popup.style.top = `${rect.bottom + window.pageYOffset + 10}px`;
+  });
+});
+
+// Close popup when clicking outside
+document.addEventListener("click", (event) => {
+  if (!popup.contains(event.target) && !event.target.closest("area")) {
+    popup.style.display = "none";
+    overlay.style.border = "none";
+  }
+});

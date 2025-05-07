@@ -434,7 +434,6 @@
                   </div>
                 </div>
               </div>
-              
               <div class="col-2 c-3">
                 <div class="select-wrapper">
                   <label>Time</label>
@@ -474,13 +473,184 @@
                 </div>
               </div>
               <div class="col-3 c-6">
-                <button type="submit" class="reservation-button">
-                  Book now
-                </button>
+                <!--  <button type="submit" class="reservation-button">
+                  choose Table
+                </button> -->
+
                 <!-- <button id="choose-table"  class="reservation-button">
                   choose a table
                 </button> -->
                 <details>
+                  <summary>
+                    <div class="reservation-button">choose table</div>
+                    <div class="details-modal-overlay"></div>
+                  </summary>
+                  <div class="details-modal" style="z-index: 222">
+                    <div class="details-modal-close">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 14 14"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
+                    <div class="details-modal-title"></div>
+                    <div class="details-modal-content">
+                      <img
+                        src="img/myimgs/tables.png"
+                        alt=""
+                        usemap="#image-map"
+                        style="width: -webkit-fill-available"
+                      />
+                      <div id="overlay"></div>
+                      <map name="image-map">
+                        <map name="image-map">
+                          <area
+                            target=""
+                            alt="table1"
+                            title="table1"
+                            href=""
+                            coords="155,71,277,130"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table2"
+                            title="table2"
+                            href=""
+                            coords="299,75,426,130"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table3"
+                            title="table3"
+                            href=""
+                            coords="468,76,590,129"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table4"
+                            title="table4"
+                            href=""
+                            coords="618,72,731,130"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table5"
+                            title="table5"
+                            href=""
+                            coords="162,147,279,206"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table6"
+                            title="table6"
+                            href=""
+                            coords="301,141,428,204"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table7"
+                            title="table7"
+                            href=""
+                            coords="472,149,590,205"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table8"
+                            title="table8"
+                            href=""
+                            coords="612,144,732,205"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table9"
+                            title="table9"
+                            href=""
+                            coords="178,221,272,349"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table10"
+                            title="table10"
+                            href=""
+                            coords="317,223,407,352"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table11"
+                            title="table11"
+                            href=""
+                            coords="488,218,584,338"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table12"
+                            title="table12"
+                            href=""
+                            coords="625,224,724,341"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table13"
+                            title="table13"
+                            href=""
+                            coords="779,68,910,188"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table14"
+                            title="table14"
+                            href=""
+                            coords="769,206,907,329"
+                            shape="rect"
+                          />
+                          <area
+                            target=""
+                            alt="table15"
+                            title="table15"
+                            href=""
+                            coords="764,347,912,474"
+                            shape="rect"
+                          />
+                        </map>
+                      </map>
+                      <div id="popup" class="popup">
+                        <p>Table <span id="tableNumber"></span></p>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+              <div class="col-3 c-6">
+                <button type="submit" class="reservation-button">
+                  Book now
+                </button>
+
+                <!-- <button id="choose-table"  class="reservation-button">
+                  choose a table
+                </button> -->
+                <!-- <details>
     <summary>
       <div class="button reservation-button">
         choose a table
@@ -516,7 +686,7 @@
 </map>
       </div>
     </div>
-  </details>
+  </details> -->
               </div>
             </form>
           </div>
@@ -2440,12 +2610,15 @@
         <!-- row end -->
         <!-- button start -->
         <div class="more-wraper-center">
-          <a href="blog.html">
+          <a
+            href="https://webobook.com/public/68198fe579e8af06b81e37d2,en?ap=true&si=false&sm=false&sp=false&sfr=true&sl=false&sop=false&"
+            target="_blank"
+          >
             <div
               class="more-button-bg-center more-button-bg-center-dark more-button-bg-center-dark-close more-button-circle"
             ></div>
             <div class="more-button-txt-center more-button-txt-center-close">
-              <span>All entries</span>
+              <span>Resturent Tour</span>
             </div>
           </a>
         </div>
@@ -3445,9 +3618,7 @@
                     <!-- divider start -->
                     <div class="divider-m"></div>
                     <!-- divider end -->
-                    <span class="contact-info-text"
-                      >ex Inc. Touchdown Dr 1176</span
-                    >
+                    <span class="contact-info-text">5th Settlement</span>
                   </div>
                   <!-- divider start -->
                   <div class="divider-m visible-mobile-devices"></div>
@@ -3706,7 +3877,7 @@
             <!-- google maps start -->
             <div class="google-maps">
               <iframe
-                src="https://maps.google.com/maps/ms?msa=0&amp;msid=211966962386664154949.0004e6fcf6a48ede4754f&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;iwloc=0004e6fcfe81051738dcb&amp;ll=48.857981,2.293514&amp;spn=0,0&amp;z=10&amp;output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16537.9824377785!2d31.426276249999994!3d30.003540549999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583cc75436d909%3A0x7f921d4528ec3e03!2sThe%205th%20Settlement%2C%20Industrial%20Area%2C%20New%20Cairo%201%2C%20Cairo%20Governorate!5e1!3m2!1sen!2seg!4v1746624317999!5m2!1sen!2seg"
               >
               </iframe>
             </div>
@@ -3736,11 +3907,12 @@
         <div class="row footer-credits">
           <!-- footer logo start -->
           <div class="footer-credits-logo">
-            <a href="#"
-              ><img
+            <a href="#">
+              <img
                 alt="Logo Footer"
-                class="footer-logo"
                 src="img/myimgs/1 (1).png"
+                style="width: 200px"
+                ;
             /></a>
           </div>
           <!-- footer logo end -->
@@ -3781,8 +3953,7 @@
             <div class="copyright">
               &copy; All Rights Reserved.<br />
               <a href="https://www.freepik.com/vectors/indian-menu"
-                >Indian menu vector created by pikisuperstar -
-                www.freepik.com</a
+                >Mustafa Ahmed - FrontEnd Developer</a
               >
             </div>
             <!-- copyright end -->
@@ -3878,5 +4049,6 @@
     <script src="js/plugins.js"></script>
     <script src="js/dinex.js"></script>
     <!-- scripts end -->
+    <script></script>
   </body>
 </html>

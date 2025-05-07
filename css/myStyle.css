@@ -37,7 +37,7 @@
 }
 .details-modal .details-modal-title {
   color: #111827;
-  padding: 1.5em 2em;
+  /* padding: 1.5em 2em; */
   pointer-events: all;
   position: relative;
   width: calc(100% - 4.5em);
@@ -49,8 +49,8 @@
 }
 .details-modal .details-modal-content {
   border-top: 1px solid #e0e0e0;
-  padding: 2em;
-  pointer-events: all;
+/*   padding: 2em;
+ */  pointer-events: all;
   overflow: auto;
 }
 
@@ -94,3 +94,28 @@ code {
   position: relative;
   top: -2px;
 }
+
+
+/* 
+ */
+
+ img {
+            display: block;
+          
+        }
+        .highlight {
+            border: 3px solid green;
+        }
+        .popup {
+            position: absolute;
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .popup img {
+            max-width: 100%;
+        }
